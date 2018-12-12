@@ -1,0 +1,25 @@
+{
+  "name": "ts-tutorials",
+  "version": "1.0.0",
+  "description": "ts tutorials",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucaMK/demo.git"
+  },
+  "keywords": [
+    "ideas"
+  ],
+  "author": "fly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LucaMK/demo/issues"
+  },
+  "homepage": "https://github.com/LucaMK/demo#readme",
+  "dependencies": {
+    "typescript": "^3.2.2"
+  }
+}
