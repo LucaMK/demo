@@ -1,0 +1,108 @@
+{
+  "_args": [
+    [
+      "qrcode@1.2.2",
+      "D:\\project_shiseido\\shiseido_web"
+    ]
+  ],
+  "_from": "qrcode@1.2.2",
+  "_id": "qrcode@1.2.2",
+  "_inBundle": false,
+  "_integrity": "sha512-iHD3eGma3PMaIfvM+p6oaTZjz83PsEIJ5F4H3oqyfKbQM+kbWjJjHdnTRlzi9q0KoiJ9QFKfiNhkEAYOWTTDdw==",
+  "_location": "/qrcode",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "qrcode@1.2.2",
+    "name": "qrcode",
+    "escapedName": "qrcode",
+    "rawSpec": "1.2.2",
+    "saveSpec": null,
+    "fetchSpec": "1.2.2"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/qrcode/-/qrcode-1.2.2.tgz",
+  "_spec": "1.2.2",
+  "_where": "D:\\project_shiseido\\shiseido_web",
+  "author": {
+    "name": "Ryan Day",
+    "email": "soldair@gmail.com"
+  },
+  "bin": {
+    "qrcode": "./bin/qrcode"
+  },
+  "browser": {
+    "./lib/index.js": "./lib/browser.js",
+    "./lib/utils/buffer.js": "./lib/utils/typedarray-buffer.js",
+    "fs": false
+  },
+  "bugs": {
+    "url": "https://github.com/soldair/node-qrcode/issues"
+  },
+  "contributors": [
+    {
+      "name": "Vincenzo Greco",
+      "email": "greco.vincenzo@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "can-promise": "^0.0.1",
+    "dijkstrajs": "^1.0.1",
+    "isarray": "^2.0.1",
+    "pngjs": "^3.3.0",
+    "yargs": "^8.0.2"
+  },
+  "description": "QRCode / 2d Barcode api with both server side and client side support using canvas",
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "canvas": "^1.6.11",
+    "canvasutil": "*",
+    "colors": "*",
+    "express": "2.5.x",
+    "htmlparser2": "^3.9.2",
+    "os-tmpdir": "^1.0.2",
+    "sinon": "^1.17.7",
+    "standard": "^9.0.2",
+    "tap": "^10.3.1",
+    "uglify-js": "^2.7.5"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "bin",
+    "build",
+    "lib",
+    "helper"
+  ],
+  "homepage": "http://github.com/soldair/node-qrcode",
+  "keywords": [
+    "canvas",
+    "qrcode",
+    "barcode"
+  ],
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "name": "qrcode",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/soldair/node-qrcode.git"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "lint": "standard",
+    "prepublish": "npm run build",
+    "pretest": "npm run lint",
+    "test": "node test.js"
+  },
+  "standard": {
+    "ignore": [
+      "build/",
+      "examples/vendors/"
+    ]
+  },
+  "version": "1.2.2"
+}
