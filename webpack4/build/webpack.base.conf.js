@@ -3,6 +3,7 @@ const path = require('path');
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const merge = require('webpack-merge')
 
 const TransformModulesPlugin = require('webpack-transform-modules-plugin')
 
@@ -53,9 +54,40 @@ let webpackConfig = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: utils.assetPath('media/[name].[hash:7].[ext]')
+                    name: utils.assetsPath('media/[name].[hash:7].[ext]')
+                }
+            },
+            {
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
                 }
             }
         ]
     }
 }
+
+module.exports = merge(webpackConfig, {
+    plugins: [
+        'progress-bar',
+        {
+            name: 'duplicate-style',
+            options: {
+                cssProcessorOptions: {
+                    safe: true,
+                    zindex: false,
+                    autoprefixer: {
+                        add: true,
+                        browsers: [
+                            'iOS >= 7',
+                            'Android >= 4.1'
+                        ]
+                    }
+                }
+            }
+        },
+        new TransformModulesPlugin()
+    ]
+})

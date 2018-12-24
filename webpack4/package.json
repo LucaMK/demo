@@ -2,8 +2,9 @@
   "name": "webpack4",
   "version": "1.0.0",
   "description": "webpack-vue-for-mobile ",
-  "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -14,13 +15,31 @@
   "license": "MIT",
   "devDependencies": {
     "chalk": "^2.4.1",
+    "copy-webpack-plugin": "^4.6.0",
     "express": "^4.16.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
     "http-proxy-middleware": "^0.19.1",
+    "node-notifier": "^5.3.0",
     "opn": "^5.4.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "ora": "^3.0.0",
+    "portfinder": "^1.0.20",
+    "postcss-loader": "^3.0.0",
+    "px2rem-loader": "^0.1.9",
+    "rimraf": "^2.6.2",
     "semver": "^5.6.0",
     "shelljs": "^0.8.3",
     "webpack": "^4.28.1",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.13",
     "webpack-merge": "^4.1.5",
     "webpack-transform-modules-plugin": "^0.4.3"
+  },
+  "dependencies": {
+    "fastclick": "^1.0.6",
+    "vue": "^2.5.21"
   }
 }
