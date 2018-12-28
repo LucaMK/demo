@@ -31,6 +31,7 @@
     "rimraf": "^2.6.2",
     "semver": "^5.6.0",
     "shelljs": "^0.8.3",
+    "vue": "^2.5.21",
     "webpack": "^4.28.1",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
@@ -39,7 +40,6 @@
     "webpack-transform-modules-plugin": "^0.4.3"
   },
   "dependencies": {
-    "fastclick": "^1.0.6",
-    "vue": "^2.5.21"
+    "fastclick": "^1.0.6"
   }
 }
