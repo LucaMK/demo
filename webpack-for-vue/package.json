@@ -1,0 +1,24 @@
+{
+  "name": "webpack-for-vue",
+  "version": "1.0.0",
+  "description": "webpack for vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "ve"
+  ],
+  "author": "flycode",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "url-loader": "^1.1.2",
+    "vue": "^2.5.21",
+    "vue-loader": "^15.4.2",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.0.1",
+    "webpack": "^4.28.2"
+  }
+}
