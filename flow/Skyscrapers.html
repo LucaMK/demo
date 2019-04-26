@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style >
+		#skyScraper{
+			width: 400px;
+			height: 1000px;
+		}
+		.foundation{
+			width: 100px;
+			height: 50px;
+			position: relative;
+			background-color: rgba(232, 233, 232, 0.616);
+			transform: rotateY(10deg);
+			animation: circle;
+		}
+		.foundation>div{
+			width: 100px;
+			height: 50px;
+			position: absolute;
+			box-sizing: border-box;
+			border: 1px solid grey;
+		}
+
+		.frount{
+			background-color: rgba(172, 75, 11, 0.801);
+			transform:translate3d(0, 0, 50px);
+		}
+		.back{
+			background-color: rgba(16, 148, 71, 0.527);
+			transform:translate3d(25px, 0, -50px);
+		}
+		.left{
+			background-color: rgba(16, 40, 148, 0.527);
+			transform: rotateY(90deg);
+			left: -50px;
+		}
+		.right{
+			background-color: rgba(16, 40, 148, 0.527);
+			transform: rotateY(90deg);
+			right: -50px;
+		}
+
+		@keyframes circle{
+			0% {transform: rotateZ(0deg)}
+			10% {transform: rotateZ(36deg)}
+			20% {transform: rotateZ(72deg)}
+			30% {transform: rotateZ(108deg)}
+			40% {transform: rotateZ(144deg)}
+			50% {transform: rotateZ(180deg)}
+			60% {transform: rotateZ(226deg)}
+			70% {transform: rotateZ(262deg)}
+			80% {transform: rotateZ(308deg)}
+			90% {transform: rotateZ(344deg)}
+			100% {transform: rotateZ(360deg)}
+		}
+	</style>
+</head>
+<body>
+	<div id="skyScraper">
+		<div class="foundation">
+			<div class="frount"></div>
+			<div class="back"></div>
+			<div class="left"></div>
+			<div class="right"></div>
+			<div class="top"></div>
+			<div class="bottom"></div>
+		</div>
+	</div>
+
+
+</body>
+</html>

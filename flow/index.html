@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		#content{
+			width: 300px;
+			height: 300px;
+			display: flex;
+			padding: 30px;
+			align-items: center;
+			justify-content: center;
+			
+			border: 3px dashed rgba(123, 123, 51, .3);
+			background-clip: text , border-box; 
+			/* background-color: rebeccapurple; */
+		}
+
+		/* p {
+			border: .8em darkviolet;
+			border-style: dotted double;
+			margin: 1em 0;
+			padding: 1.4em;
+			background: linear-gradient(60deg, red, yellow, red, yellow, red);
+			font: 900 1.2em sans-serif;
+			text-decoration: underline;
+		}
+
+.border-box { background-clip: border-box; }
+.padding-box { background-clip: padding-box; }
+.content-box { background-clip: content-box; }
+
+.text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0,0,0,.2);
+} */
+	</style>
+	
+</head>
+<body>
+	<div id="content">
+		box content
+	</div>
+
+	<!-- <p class="border-box">The background extends behind the border.</p>
+<p class="padding-box">The background extends to the inside edge of the border.</p>
+<p class="content-box">The background extends only to the edge of the content box.</p>
+<p class="text">The background is clipped to the foreground text.</p> -->
+<p>-------------</p>
+<style>
+		p { 
+		width: 50px;
+		height: 50px;
+		background-color: teal;
+	}
+
+	.transformed {
+		transform: perspective(500px) translate3d(10px,0px,0px);
+		/* equivalent to perspective(500px) translateX(10px)*/
+		background-color: blue;
+	}
+</style>
+	<p>foo</p>
+	<p class="transformed">bar</p>
+	<p>foo</p>
+
+</body>
+</html>
