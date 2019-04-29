@@ -12,51 +12,137 @@
 		}
 		.foundation{
 			width: 100px;
-			height: 50px;
+			height: 100px;
+			margin-left: 50px;
+			/* margin-top: 50px; */
 			position: relative;
-			background-color: rgba(232, 233, 232, 0.616);
-			transform: rotateY(10deg);
-			animation: circle;
+			/* background-color: rgba(247, 11, 11, 0.918); */
+			transform-style:  preserve-3d ;
+			transform:perspective(300px) translate3d(10px, 10px, 10px) ;
+			animation: 5s ease-in-out infinite circle alternate;
 		}
 		.foundation>div{
 			width: 100px;
-			height: 50px;
+			height: 100px;
+			background-color: rgba(0,0,0, .1);
 			position: absolute;
 			box-sizing: border-box;
 			border: 1px solid grey;
+			/* transform: ; */
 		}
 
 		.frount{
-			background-color: rgba(172, 75, 11, 0.801);
-			transform:translate3d(0, 0, 50px);
+			/* background-color: rgba(172, 75, 11, 0.801); */
+			transform-origin: center;
+			transform: translate3d(0, 0, 50px);
 		}
 		.back{
-			background-color: rgba(16, 148, 71, 0.527);
-			transform:translate3d(25px, 0, -50px);
+			/* background-color: rgba(16, 148, 71, 0.527); */
+			transform: translate3d(0, 0, -50px);
 		}
 		.left{
-			background-color: rgba(16, 40, 148, 0.527);
-			transform: rotateY(90deg);
+			/* background-color: rgba(16, 40, 148, 0.527); */
+			transform:  rotateY(90deg);
 			left: -50px;
 		}
 		.right{
-			background-color: rgba(16, 40, 148, 0.527);
-			transform: rotateY(90deg);
-			right: -50px;
+			/* background-color: rgba(16, 40, 148, 0.527); */
+			transform-origin: center;
+			transform: translate3d(50px, 0, 0) rotateY(90deg);
+		}
+
+		.top{
+			/* background-color: rgba(51, 145, 51, 0.527); */
+			transform-origin: center;
+			transform:translate3d(0, -50px, 0) rotateX(90deg);
+		}
+
+		.bottom{
+			/* background-color: rgba(145, 139, 51, 0.527); */
+			transform-origin: center;
+			transform: translate3d(0, 50px, 0) rotateX(90deg);
 		}
 
 		@keyframes circle{
-			0% {transform: rotateZ(0deg)}
-			10% {transform: rotateZ(36deg)}
-			20% {transform: rotateZ(72deg)}
-			30% {transform: rotateZ(108deg)}
-			40% {transform: rotateZ(144deg)}
-			50% {transform: rotateZ(180deg)}
-			60% {transform: rotateZ(226deg)}
-			70% {transform: rotateZ(262deg)}
-			80% {transform: rotateZ(308deg)}
-			90% {transform: rotateZ(344deg)}
-			100% {transform: rotateZ(360deg)}
+			from {transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg) scale3d(0, 0, 0);}
+			to  {transform: rotateX(-10deg) rotateY(360deg) rotateZ(0deg) scale3d(1, 1, 1);}
+			/* 0% {transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);}
+			100% {transform: rotateX(-10deg) rotateY(360deg) rotateZ(0deg) scale3d(0, 0, 0);} */
+
+			/* 0% {transform:  rotate3d( -.1, 1, .1, 0deg) ;}
+			100% {transform:  rotate3d( -.1, 1, .1, 360deg) ;} */
+		}
+
+		@keyframes circle1{
+			0% {transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg) scale3d(0, 0, 0);}
+			10% {transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);}
+			100% {transform: rotateX(-10deg) rotateY(360deg) rotateZ(0deg) scale3d(0, 0, 0);}
+			10% {transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);}
+
+			/* 100% {transform:  rotate3d( -.1, 1, .1, 360deg) ;}
+			0% {transform:  rotate3d( -.1, 1, .1, 0deg) ;} */
+		}
+		
+		/* 模拟抖动 */
+		.shake-action{
+			width: 200px;
+			height: 200px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.shake-circle{
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			border: 1px solid #333;
+			box-shadow: 3px 4px #aaa;
+		}
+
+		.circle-arrow{
+			height: 2px;
+			width: 50px;
+			background-color: #aaa;
+			transform: translateY(49px) ;
+			animation: shake 7s .3s infinite  alternate ;
+			animation-timing-function: linear ease cubic-bezier(0.1, 0.7, 1.0, 0.1);
+		}
+
+		@keyframes shake{
+			0% {transform: translateY(49px) rotate(90deg); transform-origin: right bottom; }
+			10% {transform: translateY(49px) rotate(0deg); transform-origin: right bottom;}
+			20% {transform: translateY(49px) rotate(80deg); transform-origin: right bottom;}
+			30% {transform: translateY(49px) rotate(0deg); transform-origin: right bottom;}
+			40% {transform: translateY(49px) rotate(70deg); transform-origin: right bottom;}
+			50% {transform: translateY(49px) rotate(0deg); transform-origin: right bottom;}
+			60% {transform: translateY(49px) rotate(60deg); transform-origin: right bottom;}
+			70% {transform: translateY(49px) rotate(0deg); transform-origin: right bottom;}
+			80% {transform: translateY(49px) rotate(40deg); transform-origin: right bottom;}
+			90% {transform: translateY(49px) rotate(0deg); transform-origin: right bottom;}
+			100% {transform: translateY(49px) rotate(0deg); transform-origin: right bottom;}
+		}
+		
+		.ball {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			margin: 0;
+			border-radius: 50%;
+			position: relative;
+			background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
+		}
+		.ball:before {
+			content: "";
+			position: absolute;
+			top: 1%;
+			left: 5%;
+			width: 90%;
+			height: 90%;
+			border-radius: 50%;
+			background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
+			filter: blur(5px);
+			z-index: 2;
 		}
 	</style>
 </head>
@@ -70,8 +156,42 @@
 			<div class="top"></div>
 			<div class="bottom"></div>
 		</div>
+		<div class="foundation">
+				<div class="frount"></div>
+				<div class="back"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+		</div>
+		<!-- 模拟抖动 -->
+		<div class="shake-action">
+			<!-- clock circle -->
+
+			<div class="shake-circle">
+				<div class="circle-arrow"></div>
+			</div>
+		</div>
 	</div>
 
+	<!-- 一个角度发光 -->
+	<div class="ball">
+	</div>
 
+	<!--  -->
+
+	<script>
+		var html = `
+		<div class="foundation">
+			<div class="frount"></div>
+			<div class="back"></div>
+			<div class="left"></div>
+			<div class="right"></div>
+			<div class="top"></div>
+			<div class="bottom"></div>
+		</div>
+		`;
+
+	</script>
 </body>
 </html>
