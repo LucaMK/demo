@@ -1,0 +1,19 @@
+{
+  "name": "mongoose",
+  "version": "1.0.0",
+  "description": "user mongoose in node",
+  "main": "index.js",
+  "dependencies": {
+    "mongoose": "^5.5.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "mongoose"
+  ],
+  "author": "",
+  "license": "ISC"
+}
