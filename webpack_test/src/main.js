@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router.js';
-console.log('this is app components is App', App);
 
 Vue.config.productionTip = false
 
@@ -17,11 +16,8 @@ var vm = new Vue({
 		console.log('this is vue modle creat function ');
 	},
 	components: {App},
-	template: `
-	<div>
-		<App/>
-	</div>
-		`,
+	template: '<App/>',
+	// render: h => h(App),
 	mounted() {
 		var h = document.createElement('DIV');
 		h.innerHTML = `<div>this is create append child</div>`;

@@ -1,12 +1,13 @@
 <template>
 	<div id="app-content" >
 		<h1>{{msg}}</h1>
+		<h2>this is msg h2 {{msg}}</h2>
+		<h3>this is test hot maddiler</h3>
 		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-console.log('this is app.vue')
 export default {
 	data() {
 		return {

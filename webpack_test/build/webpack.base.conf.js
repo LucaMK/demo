@@ -4,23 +4,20 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports ={
-		mode: 'production',
+		mode: 'development',
     entry:'./src/main.js',
     output:{
         path:path.resolve(__dirname,'outDist'),
         filename:"main.js"
 		},
 		resolve: {
-			alias: {
-				vue: 'vue/dist/vue.js'
-			},
 			extensions: ['.js', '.vue', '.json']
 		},
-		// devServer: {
-		// 	contentBase: path.join(__dirname, 'outDist'),
-		// 	compress: true,
-		// 	port: 9999
-		// },
+		devServer: {
+			contentBase: path.join(__dirname, 'outDist'),
+			compress: true,
+			port: 9999
+		},
 		module:{
 			rules: [
 				{
@@ -55,6 +52,11 @@ module.exports ={
 					]
 				}
 			]
+		},
+		resolve: {
+			alias: {
+				vue: 'vue/dist/vue.js'
+			}
 		},
 		plugins: [
 			new VueLoaderPlugin(),
