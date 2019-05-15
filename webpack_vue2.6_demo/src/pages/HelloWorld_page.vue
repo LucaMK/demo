@@ -1,7 +1,7 @@
 <template>
 	<div class="h-container">
 		<img src="../../static/logo.png" alt="logo">
-		<h1>this is helloworld page</h1>
+		<h1>this is helloworld hahah</h1>
 		<h2>{{msg}}</h2>
 	</div>
 </template>

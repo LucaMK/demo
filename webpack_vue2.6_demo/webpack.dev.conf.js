@@ -60,6 +60,14 @@ module.exports = {
 			}
 		]
 	},
+	devServer: {
+		contentBase: './dist',
+		clientLogLevel: 'warning',
+		compress: true,
+		host: 'localhost',
+		port: 8123,
+		hot: true
+	},
 	// 添加默认解析后缀
 	resolve: {
 		extensions: ['.js', '.css', '.vue']
