@@ -1,0 +1,68 @@
+{
+	"configurations": [
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - EmployeeTest",
+			"request": "launch",
+			"mainClass": "EmployeeTest"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - Test",
+			"request": "launch",
+			"mainClass": "Test"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - TestSize",
+			"request": "launch",
+			"mainClass": "TestSize"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - PrintTypeTest",
+			"request": "launch",
+			"mainClass": "PrintTypeTest"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - PrintTest",
+			"request": "launch",
+			"mainClass": "PrintTest"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - Puppy",
+			"request": "launch",
+			"mainClass": "Puppy"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - EmployeeTest",
+			"request": "launch",
+			"mainClass": "EmployeeTest",
+			"projectName": "java_6fac95de"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - Puppy",
+			"request": "launch",
+			"mainClass": "Puppy",
+			"projectName": "java_6fac95de"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - FreshJuiceTest",
+			"request": "launch",
+			"mainClass": "FreshJuiceTest",
+			"projectName": "java_6fac95de"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - HelloWorld",
+			"request": "launch",
+			"mainClass": "HelloWorld",
+			"projectName": "java_6fac95de"
+		}
+	]
+}

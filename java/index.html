@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<h1>{{msg}}</h1>
+		<app-com></app-com>
+		<p>this is use app3 data{{isData}}</p>
+	</div>
+	<div id="app3">
+		<p style="color: red">i am app3 msg{{msg}}</p>
+		<button @click="changeMsg">change app3 msg</button>
+	</div>
+	<script>
+		var template = `
+			<div id="#app2">
+				{{msg}}
+			</div>
+		`;
+		Vue.component('app-com',{
+			template: template,
+			data () {
+				return {
+					msg: 'hi!, this is app2',
+				}
+			}
+		})
+		
+		var app3 = new Vue({
+			el : '#app3',
+			data () {
+				return {
+					msg: 'hei! this is app3'
+				}
+			},
+			methods: {
+				changeMsg() {
+					var n = Math.random();
+					this.msg = 'haha！ I am change ' + n;
+				}
+			},
+		})
+
+
+		var app1 = new Vue({
+			el: '#app',
+			data () {
+				return {
+					msg: 'hello world this is app1',
+					isData: app3.msg
+				}
+			}
+		})
+
+	
+	</script>
+</body>
+</html>
