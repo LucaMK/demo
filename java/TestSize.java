@@ -1,3 +1,5 @@
+import sun.security.jca.GetInstance.Instance;
+
 public class TestSize {
 	// static boolean bool;
 	// static byte by;
@@ -60,7 +62,27 @@ public class TestSize {
 					System.out.println("ttttttt:");
 				}
 		}
+
+		private static int numInstances = 0;
+		protected static int getCount () {
+			return numInstances;
+		}
+
+		private static void addInstance () {
+			numInstances++ ;
+		}
+
+		instanceCounter() {
+			TestSize.addInstance();
+		}
+
+
    public static void main(String[] args){
+			System.out.print("Starting with " + TestSize.getCount() + "instance" );
+			for ( int i = 0; i < 500 ; ++i) {
+				instanceCounter();
+			}
+			System.out.println("created :" + TestSize.getCount() + "instances");
 			nameT = "ashtiajkdlajkdf";
 			System.out.println(nameT);
 			TestSize test = new TestSize();
@@ -77,7 +99,4 @@ public class TestSize {
 		// public void setFormat(String format) {
 		// 		this.format = format;
 		// }
-
-
-
 }
