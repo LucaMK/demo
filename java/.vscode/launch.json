@@ -2,6 +2,31 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "CodeLens (Launch) - HelloWorld",
+			"request": "launch",
+			"mainClass": "HelloWorld",
+			"projectName": "java_9d3a3c92"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - TTDoWhile",
+			"request": "launch",
+			"mainClass": "TTDoWhile"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - DoWhile",
+			"request": "launch",
+			"mainClass": "DoWhile"
+		},
+		{
+			"type": "java",
+			"name": "CodeLens (Launch) - FilterTheOne",
+			"request": "launch",
+			"mainClass": "FilterTheOne"
+		},
+		{
+			"type": "java",
 			"name": "CodeLens (Launch) - Final",
 			"request": "launch",
 			"mainClass": "Final"
