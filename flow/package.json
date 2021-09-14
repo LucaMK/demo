@@ -156,7 +156,7 @@
     "ret": "^0.1.15",
     "safe-buffer": "^5.1.2",
     "safe-regex": "^1.1.0",
-    "set-value": "^2.0.0",
+    "set-value": "^4.0.1",
     "slash": "^1.0.0",
     "snapdragon": "^0.8.2",
     "snapdragon-node": "^2.1.1",
