@@ -61,7 +61,7 @@
     "core-js": "^2.6.5",
     "core-util-is": "^1.0.2",
     "debug": "^2.6.9",
-    "decode-uri-component": "^0.2.0",
+    "decode-uri-component": "^0.2.1",
     "define-property": "^0.2.5",
     "detect-indent": "^4.0.0",
     "escape-string-regexp": "^1.0.5",
