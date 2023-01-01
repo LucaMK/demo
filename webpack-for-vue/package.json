@@ -14,11 +14,11 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "url-loader": "^1.1.2",
+    "url-loader": "^4.1.1",
     "vue": "^2.5.21",
-    "vue-loader": "^15.4.2",
+    "vue-loader": "^17.0.1",
     "vue-router": "^3.0.2",
     "vuex": "^3.0.1",
-    "webpack": "^4.28.2"
+    "webpack": "^5.75.0"
   }
 }
