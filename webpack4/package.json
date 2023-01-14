@@ -34,7 +34,7 @@
     "vue": "^2.5.21",
     "webpack": "^4.28.1",
     "webpack-bundle-analyzer": "^3.0.3",
-    "webpack-cli": "^3.1.2",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.1.13",
     "webpack-merge": "^4.1.5",
     "webpack-transform-modules-plugin": "^0.4.3"
